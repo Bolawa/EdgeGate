@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel</title>
+</head>
+<body>
+    <h1>Employee Submissions</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Full Name</th>
+            <th>Start Date</th>
+            <th>Address</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Bank Name</th>
+            <th>Account Number</th>
+            <th>Emergency Contact</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.full_name }}</td>
+            <td>{{ employee.start_date }}</td>
+            <td>{{ employee.address }}</td>
+            <td>{{ employee.phone }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.bank_name }}</td>
+            <td>{{ employee.account_number }}</td>
+            <td>{{ employee.emergency_contact_name }} ({{ employee.emergency_contact_phone }})</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
